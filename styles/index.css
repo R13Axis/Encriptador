@@ -33,6 +33,7 @@ textarea {
     font-size: 2em;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    
 }
 
 .texto::placeholder {
@@ -103,6 +104,11 @@ textarea.texto {
     width: 20em;
     height: 4em;
     border-radius: 25px;
+}
+
+.texto-img {
+    position: absolute;
+    background-color: white;
 }
 
 
