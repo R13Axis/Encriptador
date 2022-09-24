@@ -40,9 +40,9 @@
 
         <div class="contenedor-flex-3 one">
         
-            <input type="button" value="Encriptar" class="encriptar"></input>
+            <input type="button" id="btn-encriptar" value="Encriptar" class="encriptar" onclick="encriptar()"></input>
 
-            <input type="button" value="Desencriptar" class="desencriptar" ></input>
+            <input type="button" id="btn-desencriptar" value="Desencriptar" class="desencriptar" onclick="desencriptar()"></input>
 
         </div>
 
@@ -60,7 +60,36 @@
 
     <script>
 
+        function encriptar() {
 
+            var texto = document.getElementById("texto").value.toLowerCase();
+
+            var textoCifrado = texto.replace(/e/img,"enter");
+            var textoCifrado = textoCifrado.replace(/o/img,"ober");
+            var textoCifrado = textoCifrado.replace(/i/img,"imes");
+            var textoCifrado = textoCifrado.replace(/a/img,"ai");
+            var textoCifrado = textoCifrado.replace(/u/img,"ufat");
+
+            document.getElementById("resultado").innerHTML = textoCifrado;
+
+        }
+
+        function desencriptar() {
+
+            var texto = document.getElementById("texto").value.toLowerCase();
+
+            var textoDescifrado = texto.replace(/enter/img,"e");
+            var textoDescifrado = textoDescifrado.replace(/ober/img,"o");
+            var textoDescifrado = textoDescifrado.replace(/imes/img,"i");
+            var textoDescifrado = textoDescifrado.replace(/ai/img,"a");
+            var textoDescifrado = textoDescifrado.replace(/ufat/img,"u");
+
+            document.getElementById("resultado").innerHTML = textoDescifrado;
+
+        }
+
+        
+        
 
     </script>
 
