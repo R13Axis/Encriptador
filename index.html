@@ -44,6 +44,8 @@
 
             <input type="button" id="btn-desencriptar" value="Desencriptar" class="desencriptar" onclick="desencriptar()"></input>
 
+            <input type="button" id="btn-copiar" value="Copiar resultado" class="desencriptar" onclick="copiar()"></input>
+
         </div>
 
         <div class="contenedor-flex-2 two">
@@ -88,7 +90,13 @@
 
         }
 
-        
+        function copiar() {
+
+            var contenido = document.querySelector("#resultado");
+            contenido.select();
+            document.execCommand("copy");
+
+        }
         
 
     </script>
